@@ -134,4 +134,13 @@ btnLogin.addEventListener('click', (event) => {
 
   //Lose focus
   inputLoginPin.blur();
+
+  //Display movements
+  displayMovements(currentAccount.movements);
+  
+  //Display balance
+  calcDisplayBalance(currentAccount.movements);
+  
+  //Display movements
+  calcDisplaySummary(currentAccount);
 });
