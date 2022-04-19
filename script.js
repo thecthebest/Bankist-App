@@ -112,3 +112,8 @@ const calcDisplaySummary = (acc) => {
   .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
+
+// Event handlers function for logging in the user
+btnLogin.addEventListener('click', (event) => {
+
+});
