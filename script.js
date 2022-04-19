@@ -65,7 +65,7 @@ const displayMovements = (movements) => {
     const html = `
         <div class="movements__row">
         <div class="movements__type movements__type--${type.toLocaleLowerCase()}">${i + 1} ${type}</div>
-        <div class="movements__value">4 000€</div>
+        <div class="movements__value">${mov}€</div>
         </div>
       `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
