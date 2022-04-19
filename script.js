@@ -113,6 +113,17 @@ const calcDisplaySummary = (acc) => {
   labelSumInterest.textContent = `${interest}€`;
 };
 
+const updateUI = (acc) => {
+  //Display movements
+  displayMovements(acc.movements);
+  
+  //Display balance
+  calcDisplayBalance(acc);
+    
+  //Display movements
+  calcDisplaySummary(acc);
+};
+
 createUserNames(accounts);
 
 let currentAccount;
@@ -135,14 +146,7 @@ btnLogin.addEventListener('click', (event) => {
   //Lose focus
   inputLoginPin.blur();
 
-  //Display movements
-  displayMovements(currentAccount.movements);
-  
-  //Display balance
-  calcDisplayBalance(currentAccount);
-  
-  //Display movements
-  calcDisplaySummary(currentAccount);
+  updateUI(currentAccount);
 });
 
 // Event handlers function for transfering money to a user
@@ -155,5 +159,6 @@ btnTransfer.addEventListener('click', (event) => {
   if (amount > 0 && receiverAcc && currentAccount.balance >= amount && currentAccount.username !== receiverAcc?.username) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
+    updateUI(currentAccount);
   }
 });
