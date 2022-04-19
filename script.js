@@ -127,5 +127,6 @@ btnLogin.addEventListener('click', (event) => {
     // Display UI and welcome message for
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   }
+  containerApp.style.opacity = 100;
 
 });
