@@ -90,3 +90,7 @@ const createUserNames = (accs) => {
     .join('');
   });
 };
+
+// Compute deposits, withdrawals and interest summary
+const calcDisplaySummary = (movements) => {
+};
