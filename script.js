@@ -71,3 +71,13 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
+// Compute user name and then add username property to the object
+const createUserNames = (accs) => {
+  accs.forEach((acc) => {
+    acc.username = acc.owner
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
+  });
+};
