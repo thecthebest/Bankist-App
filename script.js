@@ -121,5 +121,9 @@ btnLogin.addEventListener('click', (event) => {
   currentAccount = accounts.find((acc) => {
     return acc.username === inputLoginUsername.value.trim();
   });
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and welcome message for
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+  }
 
 });
