@@ -71,6 +71,15 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
+
+// Calculate balance and then display
+const calcDisplayBalance = (movements) => {
+  const balance = movements.reduce((acc, mov) => {
+    return acc + mov;
+  }, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+
 // Compute user name and then add username property to the object
 const createUserNames = (accs) => {
   accs.forEach((acc) => {
