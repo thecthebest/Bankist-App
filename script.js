@@ -144,3 +144,8 @@ btnLogin.addEventListener('click', (event) => {
   //Display movements
   calcDisplaySummary(currentAccount);
 });
+
+// Event handlers function for transfering money to a user
+btnTransfer.addEventListener('click', (event) => {
+
+});
