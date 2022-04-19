@@ -92,23 +92,23 @@ const createUserNames = (accs) => {
 };
 
 // Compute deposits, withdrawals and interest summary
-const calcDisplaySummary = (movements) => {
+const calcDisplaySummary = (acc) => {
   // Computes deposit summary
-  const incomes = movements
+  const incomes = acc.movements
   .filter(movement => movement > 0)
   .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
-  
+
   // Compute withdrawals summary
-  const outs = movements
+  const outs = acc.movements
   .filter(movement => movement < 0)
   .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outs)}€`;
 
   // Compute interest summary
-  const interest = movements
+  const interest = acc.movements
   .filter(movement => movement > 0)
-  .map(deposit => deposit * 1.2/100)
+  .map(deposit => deposit * acc.interestRate / 100)
   .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
