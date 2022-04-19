@@ -74,7 +74,7 @@ const displayMovements = (movements) => {
 
 // Calculate balance and then display
 const calcDisplayBalance = (acc) => {
-  acc.balance = movements.reduce((acc, mov) => {
+  acc.balance = acc.movements.reduce((acc, mov) => {
     return acc + mov;
   }, 0);
   labelBalance.textContent = `${acc.balance}€`;
