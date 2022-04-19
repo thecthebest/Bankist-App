@@ -115,5 +115,6 @@ const calcDisplaySummary = (acc) => {
 
 // Event handlers function for logging in the user
 btnLogin.addEventListener('click', (event) => {
+  event.preventDefault();
 
 });
