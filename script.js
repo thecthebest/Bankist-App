@@ -129,4 +129,9 @@ btnLogin.addEventListener('click', (event) => {
   }
   containerApp.style.opacity = 100;
 
+  //Clear inputs
+  inputLoginUsername.value = inputLoginPin.value = '';
+
+  //Lose focus
+  inputLoginPin.blur();
 });
