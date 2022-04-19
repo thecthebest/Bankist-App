@@ -148,4 +148,5 @@ btnLogin.addEventListener('click', (event) => {
 // Event handlers function for transfering money to a user
 btnTransfer.addEventListener('click', (event) => {
   event.preventDefault();
+  const amount = Number(inputTransferAmount.value);
 });
