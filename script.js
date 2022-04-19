@@ -73,11 +73,11 @@ const displayMovements = (movements) => {
 };
 
 // Calculate balance and then display
-const calcDisplayBalance = (movements) => {
-  const balance = movements.reduce((acc, mov) => {
+const calcDisplayBalance = (acc) => {
+  acc.balance = movements.reduce((acc, mov) => {
     return acc + mov;
   }, 0);
-  labelBalance.textContent = `${balance}€`;
+  labelBalance.textContent = `${acc.balance}€`;
 };
 
 // Compute user name and then add username property to the object
@@ -139,7 +139,7 @@ btnLogin.addEventListener('click', (event) => {
   displayMovements(currentAccount.movements);
   
   //Display balance
-  calcDisplayBalance(currentAccount.movements);
+  calcDisplayBalance(currentAccount);
   
   //Display movements
   calcDisplaySummary(currentAccount);
