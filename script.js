@@ -113,6 +113,8 @@ const calcDisplaySummary = (acc) => {
   labelSumInterest.textContent = `${interest}€`;
 };
 
+createUserNames(accounts);
+
 let currentAccount;
 
 // Event handlers function for logging in the user
