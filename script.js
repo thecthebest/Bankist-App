@@ -113,8 +113,13 @@ const calcDisplaySummary = (acc) => {
   labelSumInterest.textContent = `${interest}€`;
 };
 
+let currentAccount;
+
 // Event handlers function for logging in the user
 btnLogin.addEventListener('click', (event) => {
   event.preventDefault();
+  currentAccount = accounts.find((acc) => {
+    return acc.username === inputLoginUsername.value.trim();
+  });
 
 });
