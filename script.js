@@ -185,3 +185,8 @@ btnClose.addEventListener('click', (event) => {
     inputCloseUsername.value = inputClosePin.value = '';
   }
 });
+
+// Event handlers function for requesting a loan
+btnLoan.addEventListener('click', (event) => {
+
+});
