@@ -171,5 +171,5 @@ btnTransfer.addEventListener('click', (event) => {
 
 // Event handlers function for closing a account
 btnClose.addEventListener('click', (event) => {
-  
-})
+  event.preventDefault();
+});
