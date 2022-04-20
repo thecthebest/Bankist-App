@@ -189,4 +189,8 @@ btnClose.addEventListener('click', (event) => {
 // Event handlers function for requesting a loan
 btnLoan.addEventListener('click', (event) => {
   event.preventDefault();
+  const account = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    
+  }
 });
