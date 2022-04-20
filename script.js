@@ -177,5 +177,10 @@ btnClose.addEventListener('click', (event) => {
       return acc.username === currentAccount.username;
     });
     
+    // Delete user
+    accounts.splice(index, 1);
+    containerApp.style.opacity = 0;
+    //Clear inputs
+    inputCloseUsername.value = inputClosePin.value = '';
   }
 });
