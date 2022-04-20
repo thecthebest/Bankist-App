@@ -188,5 +188,5 @@ btnClose.addEventListener('click', (event) => {
 
 // Event handlers function for requesting a loan
 btnLoan.addEventListener('click', (event) => {
-
+  event.preventDefault();
 });
