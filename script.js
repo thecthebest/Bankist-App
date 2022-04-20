@@ -196,3 +196,8 @@ btnLoan.addEventListener('click', (event) => {
     inputLoanAmount.value = '';
   }
 });
+
+// // Event handlers function for sorting
+btnSort.addEventListener('click', (event) => {
+
+});
