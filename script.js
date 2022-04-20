@@ -168,3 +168,8 @@ btnTransfer.addEventListener('click', (event) => {
     updateUI(currentAccount);
   }
 });
+
+// Event handlers function for closing a account
+btnClose.addEventListener('click', (event) => {
+  
+})
