@@ -199,5 +199,5 @@ btnLoan.addEventListener('click', (event) => {
 
 // // Event handlers function for sorting
 btnSort.addEventListener('click', (event) => {
-
+  event.preventDefault();
 });
