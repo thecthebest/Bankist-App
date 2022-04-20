@@ -173,6 +173,9 @@ btnTransfer.addEventListener('click', (event) => {
 btnClose.addEventListener('click', (event) => {
   event.preventDefault();
   if (inputCloseUsername.value === currentAccount.username && Number(inputClosePin.value) === currentAccount.pin) {
+    const index = accounts.findIndex((acc) => {
+      return acc.username === currentAccount.username;
+    });
     
   }
 });
