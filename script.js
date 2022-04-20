@@ -137,16 +137,17 @@ btnLogin.addEventListener('click', (event) => {
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and welcome message for
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+    
+    containerApp.style.opacity = 100;
+
+    //Clear inputs
+    inputLoginUsername.value = inputLoginPin.value = '';
+  
+    //Lose focus
+    inputLoginPin.blur();
+  
+    updateUI(currentAccount);
   }
-  containerApp.style.opacity = 100;
-
-  //Clear inputs
-  inputLoginUsername.value = inputLoginPin.value = '';
-
-  //Lose focus
-  inputLoginPin.blur();
-
-  updateUI(currentAccount);
 });
 
 // Event handlers function for transfering money to a user
@@ -176,7 +177,7 @@ btnClose.addEventListener('click', (event) => {
     const index = accounts.findIndex((acc) => {
       return acc.username === currentAccount.username;
     });
-    
+
     // Delete user
     accounts.splice(index, 1);
     containerApp.style.opacity = 0;
